@@ -1,0 +1,572 @@
+
+/* переменные*/
+
+@import "vars";
+
+
+@media screen and (min-width:1000px) {
+
+	.footer {
+
+		&-secure {
+			position: absolute;
+	    bottom: 37px;
+	    left: 37px;
+	    width: auto;
+		}
+	}
+}
+
+
+@media screen and (min-width:700px) {
+
+	.header-menu {
+	   &:hover {
+	     .header-menu-dropdown {
+	       visibility: visible;
+	       opacity: 1;
+	     }
+	   }
+	 
+	}
+
+	.pay-block {
+
+	  &_traffic-police {
+	    border-bottom: none;
+	  }
+
+	}
+
+}
+
+
+@media screen and (max-width:1100px) {
+
+	.share {
+		right: 20px;
+    bottom: 20px;
+  	background-color: $light-bg; // пришлось добавить вопреки макету, так как нередко значок сливается с другими элементами
+  	-webkit-box-shadow: 0 0 3px 2px $light-bg; 
+  	        box-shadow: 0 0 3px 2px $light-bg;
+	}
+
+}
+
+@media screen and (max-width:1000px) {
+
+	.partners {
+	  
+	  &-items {
+	    -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+	  }
+
+		&-item {
+			width: 33%;
+			margin-bottom: 40px;
+
+			&:nth-child(4),
+			&:nth-child(5),
+			&:nth-child(6) {
+				margin-bottom: 0;
+			}
+	  }
+
+	}
+
+	.footer {
+		padding: 42px 20px 14px 17px;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+
+	  &-copyright {
+    	line-height: 18px;
+    	text-align: center;
+    	width: 100%;
+	  	-webkit-box-ordinal-group: 3;
+	  	    -ms-flex-order: 2;
+	  	        order: 2;
+	  }
+
+	  &-links {
+	  	width: 100%;
+	  	-webkit-box-ordinal-group: 2;
+	  	    -ms-flex-order: 1;
+	  	        order: 1;
+	  	text-align: center;
+	  	margin-bottom: 20px;
+
+	  	&-list {
+	  		display: inline-block;
+	  	}
+
+	    &-item {
+				display: inline-block;
+				margin-right: 15px;
+				margin-bottom: 0;
+
+				&:last-child {
+					margin-right: 0;
+				}
+	    }
+	  }
+
+	  &-feedback {
+	  	display: none;
+    }
+
+	  &-firma {
+	  	width: 100%;
+	  	-webkit-box-ordinal-group: 4;
+	  	    -ms-flex-order: 3;
+	  	        order: 3;
+    	text-align: center;
+    	margin-bottom: 11px;
+
+    	&-text {
+    		line-height: 18px;
+    		margin-bottom: 0;
+    		margin-left: 0;
+    	}
+
+    	&-link {
+    		display: none;
+    	}
+	  }
+
+	  &-secure {
+	  	-webkit-box-ordinal-group: 5;
+	  	    -ms-flex-order: 4;
+	  	        order: 4;
+	  	text-align: center;
+
+    	&-link {
+    		
+    	}
+	  }
+	}
+
+}
+
+
+@media screen and (max-width:700px) {
+
+	.search-block {
+		padding-top: 43px;
+		min-height: 213px;
+
+		&-container {
+			
+		}
+
+		&-header {
+	    text-align: center;
+			font-size: 21px;
+			margin-bottom: 20px;
+		}
+
+		&-caption {
+			display: none;
+		}
+
+		/* переделываем кнопку в иконку поиска*/
+		&-btn {
+			padding: 0;
+			font-size: 0;
+			position: absolute;
+			right: 9px;
+			top: calc(50% - 11px);
+			width: 23px;
+			height: 23px;
+			-webkit-box-shadow: none;
+			        box-shadow: none;
+			background: url('../img/search-icon.svg') center no-repeat;
+	    &:hover {
+	      background-color: transparent;
+	    }
+		}
+
+		&-field-wrapper {
+			position: relative;
+		}
+
+		&-field-label {
+			margin-right: 0;
+		}
+
+		&-field {
+			-webkit-box-shadow: inset 0 1px 3px rgba(21, 38, 53, 0.82);
+			        box-shadow: inset 0 1px 3px rgba(21, 38, 53, 0.82);
+			padding: 15px 45px 14px 14px;
+			
+			&, &::-webkit-input-placeholder {
+	      font-size: 15px;
+	    }
+			
+			&, &::-moz-placeholder {
+	      font-size: 15px;
+	    }
+			
+			&, &:-ms-input-placeholder {
+	      font-size: 15px;
+	    }
+			
+			&, &::-ms-input-placeholder {
+	      font-size: 15px;
+	    }
+			
+			&, &::placeholder {
+	      font-size: 15px;
+	    }
+		}
+	
+	}
+
+
+	.body {
+		padding-top: 40px; /* для header*/
+	}
+
+
+	.header {
+		padding: 5px 12px 6px;
+
+		&-btn {
+			display: none;
+		}
+
+		&-logo {
+			margin-left: 0;
+
+			&-img {
+				width: 197px;
+			}
+		}
+
+		&-menu {
+			padding: 0;
+			width: 29px;
+    	height: 25px;
+
+			&-text {
+			  display: none;
+			}
+
+			&-sign {
+				display: block;
+			}
+
+			&-dropdown {
+				width: 100vw;
+				top: calc(100% + 6px);
+    		right: -12px;
+    		padding: 8px;
+    		-webkit-box-shadow: none;
+    		        box-shadow: none;
+  		}
+
+  		&-triangle {
+				display: none;
+  		}
+
+  		&-link {
+
+				&:last-of-type {
+					margin-bottom: 12px;
+				}
+  		}
+
+  		&-btn {
+  			display: block;
+  		}
+		}
+	
+	}
+
+	.container {
+		padding-left: 15px;
+    padding-right: 15px;
+	
+	}
+
+	.main {
+		padding-top: 29px;
+  
+	  &-header {
+
+	  	&-container {
+	  		margin-bottom: 14px;
+	  	}
+
+	    &-title {
+	    	margin-bottom: 14px;
+	     	
+	      &_md {
+	        display: none;
+	      }
+
+	      &_sm {
+	        display: block;
+	      }
+	    }
+
+	    &-links {
+	    	display: none;
+	    }
+	  }
+	
+	}
+
+	.pay-block {
+	  padding: 0;
+
+	  &_opened {
+	  	.pay-block-content {
+  			display: block;
+	  	}
+
+	  	.pay-block-header-wrapper {
+
+				&::after {
+					-webkit-transform: rotate(180deg);
+					        -ms-transform: rotate(180deg);
+					    transform: rotate(180deg);
+					top: 27px;
+    			right: 0px;
+				}
+		  }
+	  }
+
+	  &_traffic-police {
+	    
+	    .pay-block-header-wrapper {
+	    	background: url('../img/traffic-police.svg') 10px 12px no-repeat;
+	    }
+	  }
+
+	  &_duties {
+	    
+	    .pay-block-header-wrapper {
+	    	background: url('../img/duties.svg') 9px 14px no-repeat;
+	    }
+	  }
+
+	  &_legal-debts {
+
+			.pay-block-header-wrapper {
+	    	background: url('../img/legal-debts.svg') 5px 9px no-repeat;
+	    }
+	  }
+
+	  &_taxes {
+	   
+	   .pay-block-header-wrapper {
+	    	background: url('../img/taxes.svg') 8px 12px no-repeat;
+	    }
+	  }
+
+	  &_services {
+	    
+	    .pay-block-header-wrapper {
+	    	background: url('../img/services.svg') 7px 10px no-repeat;
+	    }
+	  }
+
+	  &_img_left {
+	    .pay-block-info {
+	      
+	    }
+	    .pay-block-container {
+	     
+	    }
+	  }
+
+	  &-container {
+	   	
+	  }
+
+	  &-info {
+	    margin-right: 0;
+	    width: 100%;
+	  }
+
+	  &-header-wrapper {
+			padding: 16px 20px 16px 63px;
+			margin-bottom: 0;
+			position: relative;
+			cursor: pointer;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 24px;
+  			right: 1px;
+		    display: block;
+		    width: 0;
+		    height: 0;
+		    border-left: 4px solid transparent;
+		    border-right: 4px solid transparent;
+		    border-top: 8px solid $blue;
+		    border-bottom: none;
+		    -webkit-transition: all .3s linear;
+		    -o-transition: all .3s linear;
+		    transition: all .3s linear;
+			}
+	  }
+
+	  &-header {
+	    color: $blue;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 21px;
+			display: inline-block;
+			border-bottom: 1px dotted $blue;
+
+			&-link {
+				text-decoration: none;
+			}
+	  }
+
+	  &-content {
+    	padding-bottom: 31px;
+    	margin-top: -2px;
+    	display: none;
+	  }
+
+	  &-text {
+	    
+	  }
+
+	  &-warning {
+	    
+	  }
+
+	  &-img {
+	    display: none;
+	  }
+	
+	}
+
+	.share {
+		right: 5px;
+    bottom: 12px;
+    background-color: transparent;
+    box-shadow: none;
+
+  	&_opened {
+	    .share-variants {
+	      left: -25px;
+	    }
+	  }
+	}
+
+}
+
+
+@media screen and (max-width:520px) {
+
+	.partners {
+		padding-top: 32px;
+		padding-bottom: 36px;
+
+		&-header {
+	  	font-size: 21px;
+	  	margin-bottom: 20px;
+	  }
+
+		&-item {
+			width: 50%;
+			margin-bottom: 28px;
+
+			&:nth-child(3) {
+				margin-bottom: 32px;
+			}
+			&:nth-child(5),
+			&:nth-child(6) {
+				margin-bottom: 0;
+			}
+		}
+
+		&-img-wrapper {
+	    margin-bottom: 15px;
+	  }
+	}
+
+	.footer {
+		padding-top: 17px;
+		font-size: 13px;
+
+	  &-links {
+	    display: none;
+	  }
+
+	  &-firma {
+    	
+	  }
+	}
+
+	.modal {
+		
+		&-content {
+			padding: 70px 20px 30px;
+			width: 100%;
+			left: 0;
+		}
+
+		&-close {
+	    right: 20px;
+	    top: 15px;
+
+	    &:before,
+	    &:after {
+	      background-color: $black-bg;
+	    }
+		}
+
+		&-text {
+			display: none;
+		}
+
+		&-form {
+			margin-bottom: 15px;
+		}
+
+		&-label {
+			margin-bottom: 10px;
+
+			&:last-of-type {
+	      margin-bottom: 20px;
+	    }
+		}
+
+		&-field {
+
+		}
+
+		&-list {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+			    -ms-flex-pack: justify;
+			        justify-content: space-between;
+
+			&-item {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width:360px) {
+	
+	.pay-block {
+
+		&-header {
+			font-size: 15px;
+		}
+	}
+
+}

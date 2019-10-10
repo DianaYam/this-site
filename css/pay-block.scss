@@ -1,0 +1,248 @@
+
+/* переменные*/
+@import "vars";
+
+.pay-block {
+  border-bottom: 1px solid $pay-block-border;
+
+  &_opened {
+
+  }
+
+  &_traffic-police {
+    padding: 70px 0 19px 0;
+
+    .pay-block-img {
+      &:after {
+        background-image: url('../img/traffic-police.png');
+      }
+    }
+  }
+
+  &_duties {
+    padding: 15px 0 69px;
+  }
+
+  &_legal-debts {
+    padding: 75px 0 73px 0;
+
+    .pay-block-text {
+      margin-bottom: 52px;
+    }
+
+    .pay-block-img {
+      &:after {
+        background-image: url('../img/legal-debts.png');
+      }
+    }
+  }
+
+  &_taxes {
+    padding: 74px 0 75px 0;
+
+    .pay-block-img {
+      &:after {
+        background-image: url('../img/taxes.png');
+      }
+    }
+  }
+
+  &_services {
+    padding: 75px 0 74px 0;
+
+    .pay-block-img {
+      &:after {
+        background-image: url('../img/services.png');
+      }
+    }
+  }
+
+  &_img_left {
+
+    .pay-block-info {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      margin-right: 0;
+    }
+    .pay-block-img {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      margin-right: 50px;
+    }
+
+  }
+
+  &-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-right: 23px;
+    padding-left: 22px;
+  }
+
+  &-info {
+    margin-right: 50px;
+  }
+
+  &-header-wrapper {
+    margin: 0 0 27px;
+  }
+
+  &-header {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+
+    &-link {
+
+    }
+  }
+
+  &-content {
+      
+  }
+
+  &-text {
+    line-height: 21px;
+    margin-bottom: 31px;
+    &-paragraph {
+      margin: 0 0 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-warning {
+    margin-bottom: 46px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-img {
+    min-width: 308px;
+    min-height: 285px;
+    background: $overlay;
+    z-index: 1;
+    position: relative;
+    text-align: right;
+    
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .6;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      mix-blend-mode: overlay;
+    }
+  }
+
+  &_no-img {
+    .pay-block-img {
+      min-height: 0;
+      background-color: transparent;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.warning {
+  &-header {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: $warning;
+    margin: 0 0 2px;
+  }
+
+  &-text {
+    margin: 0;
+    line-height: 21px;
+  }
+}
+
+
+
+// специальные стили для IE 10+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .pay-block {
+
+    &-img {
+      
+      &:after {
+        opacity: .99;
+        background: $overlay;
+      }
+    }
+
+    &_no-img {
+      .pay-block-img {
+        background: none;
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &_traffic-police {
+      .pay-block-img {
+        background-image: url('../img/traffic-police.png');
+        &:after {
+          background-image: none;
+        }
+      }
+    }
+
+    &_legal-debts {
+
+      .pay-block-img {
+        background-image: url('../img/legal-debts.png');
+
+        &:after {
+          background-image: none;
+        }
+      }
+    }
+
+    &_taxes {
+
+      .pay-block-img {
+        background-image: url('../img/taxes.png');
+
+        &:after {
+          background-image: none;
+        }
+      }
+    }
+
+    &_services {
+
+      .pay-block-img {
+        background-image: url('../img/services.png');
+
+        &:after {
+          background-image: none;
+        }
+      }
+    }
+  }
+}

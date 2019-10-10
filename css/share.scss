@@ -1,0 +1,52 @@
+
+/* переменные*/
+@import "vars";
+
+
+.share {
+  position: fixed;
+  border-radius: 50%;
+  right: calc((100% - 1003px) / 4);
+  bottom: 29px;
+  width: 35px;
+  height: 35px;
+  background: url('../img/share.svg') 5px center no-repeat;
+  cursor: pointer;
+  z-index: 10;
+
+  &_opened {
+
+    .share-variants {
+      opacity: 1;
+      left: -14px;
+    }
+  }
+
+  &-variants {
+    opacity: 0;
+    position: absolute;
+    top: -270px;
+    left: 200px;
+    -webkit-transition: left .5s ease-in-out, opacity .3s ease-in-out;
+    -o-transition: left .5s ease-in-out, opacity .3s ease-in-out;
+    transition: left .5s ease-in-out, opacity .3s ease-in-out;
+  }
+}
+
+
+/* стили для сформированного внешним скриптом блока Поделиться */
+
+.ya-share2 {
+  background-color: $light-bg;
+  border: 2px solid $blue;
+  padding: 15px;
+  border-radius: 10px;
+
+  &__list_direction_horizontal > .ya-share2__item:not(:last-child) {
+    margin-bottom: 7px !important;
+  }
+
+  .ya-share2__container_size_m .ya-share2__item {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,48 @@
+
+/* переменные*/
+@import "vars";
+
+.main {
+  padding-top: 52px;
+  
+  &-header {
+
+    &-container {
+      margin-bottom: 11px;
+    }
+
+    &-title {
+      text-align: center;
+      margin: 0 0 25px;
+      font-weight: 400;
+      font-size: 36px;
+
+      &_sm {
+        display: none;
+        font-size: 21px;
+      }
+
+      &-md {
+        
+      }
+    }
+    
+    &-links {
+      line-height: 33px;
+      text-align: center;
+      max-width: 600px;
+      font-size: 18px;
+      margin: 0 auto;
+    }
+
+    &-link {
+      margin-right: 20px;
+    }
+
+  }
+
+  &-pay-blocks {
+
+  }
+  
+}

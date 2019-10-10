@@ -1,0 +1,57 @@
+
+/* переменные*/
+@import "vars";
+
+.partners {
+  padding: 75px 0 56px 0;
+
+  &-container {
+    
+  }
+
+  &-header {
+    margin: 0 0 40px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  &-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch;
+  }
+
+  &-item {
+    width: calc(100% / 6);
+
+    &-container {
+      max-width: 150px;
+      min-height: 145px;
+      margin: 0 auto;
+    }
+  }
+
+  &-img-wrapper {
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    margin-bottom: 20px;
+  }
+
+  &-img {
+    vertical-align: middle;
+  }
+
+  &-name {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 15px;
+  }
+}

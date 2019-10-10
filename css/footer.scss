@@ -1,0 +1,93 @@
+
+/* переменные*/
+@import "vars";
+
+.footer {
+  position: relative;
+  background-color: $light-blue-bg;
+  padding: 42px 32px 40px 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+
+  &-copyright {
+    line-height: 21px;
+    width: 300px;
+
+    &-text {
+      
+    }
+  }
+
+  &-links {
+    width: 176px;
+
+    &-list {
+
+    }
+
+    &-item {
+
+    }
+
+    &-link {
+
+    }
+  }
+
+  &-feedback {
+    width: 238px;
+    padding-top: 1px;
+
+    &-number {
+      margin-bottom: 19px;
+
+      &-link {
+        font-size: 24px;
+      }
+
+      &-caption {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    &-list {
+
+      &-item {
+
+      }
+
+      &-link {
+
+      }
+    }
+  }
+
+  &-firma {
+    width: 270px;
+    text-align: right;
+
+    &-text {
+      line-height: 21px;
+      margin-bottom: 16px;
+      margin-left: auto;
+    }
+
+    &-link {
+
+    }
+  }
+
+  &-secure {
+    width: 100%;
+
+    &-link {
+      line-height: 0;
+      display: block;
+    }
+  }
+}

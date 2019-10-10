@@ -1,0 +1,47 @@
+
+/* переменные*/
+@import "vars";
+
+/* сниппеты*/
+@import "snippets";
+
+/* шрифт*/
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&display=swap&subset=cyrillic');
+
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+
+  // убираем голубой фон при клике на блок на мобильном устройстве
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.body {
+  margin: 0;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 15px;
+  padding-top: 67px;
+  color: $dark-text;
+  line-height: 27px;
+  position: relative; /* для модального окна и share*/
+
+  &.modal-opened {
+    overflow: hidden; /* чтобы отменить прокрутку под модальным окном*/
+  }
+}
+
+
+/* все блоки*/
+
+@import "header";
+@import "search-block";
+@import "main";
+@import "pay-block";
+@import "partners";
+@import "footer";
+@import "modal";
+@import "share";
+
+/* media-queries*/
+@import "media";

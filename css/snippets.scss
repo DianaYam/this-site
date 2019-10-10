@@ -1,0 +1,146 @@
+
+/* компоненты, готовые к переиспользованию*/
+
+
+/* переменные*/
+@import "vars";
+
+
+/* кнопка с заливкой, реагирует на hover и active*/
+
+.background-btn {
+  border: none;
+  -webkit-box-shadow: 1px 2px 5px rgba(0, 36, 69, 0.35), inset -1px -1px 0 rgba(154, 0, 7, 0.82);
+          box-shadow: 1px 2px 5px rgba(0, 36, 69, 0.35), inset -1px -1px 0 rgba(154, 0, 7, 0.82);
+  background-color: $btn-bg;
+  color: $light-text;
+  font-size: 20px;
+  font-family: 'PT Sans Caption', sans-serif;
+  cursor: pointer;
+  padding: 16px;
+
+  &:hover {
+    background-color: $btn-bg-darken;
+  }
+
+  &:active {
+    background-color: $btn-bg;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+}
+
+
+/* поле для ввода (текст, пароль и т.д.)*/
+
+.text-field {
+  -webkit-box-shadow: inset 1px 1px 3px rgba(21, 38, 53, 0.82);
+          box-shadow: inset 1px 1px 3px rgba(21, 38, 53, 0.82);
+  padding: 18px 20px;
+  width: 100%;
+  border: none;
+  &, &::-webkit-input-placeholder {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 18px;
+  }
+  &, &::-moz-placeholder {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 18px;
+  }
+  &, &:-ms-input-placeholder {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 18px;
+  }
+  &, &::-ms-input-placeholder {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 18px;
+  }
+  &, &::placeholder {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 18px;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+
+/* кнопка с рамкой*/
+
+.btn {
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 15px;
+  background: none;
+  border: 2px solid $blue;
+  color: $blue;
+  cursor: pointer;
+  padding: 6px 22px 7px;
+  -webkit-transition: -webkit-box-shadow linear .1s;
+  transition: -webkit-box-shadow linear .1s;
+  -o-transition: box-shadow linear .1s;
+  transition: box-shadow linear .1s;
+  transition: box-shadow linear .1s, -webkit-box-shadow linear .1s;
+  
+  &:hover {
+    -webkit-box-shadow: 0 2px 2px rgba($blue, 0.2);
+            box-shadow: 0 2px 2px rgba($blue, 0.2);
+  }
+
+  &:focus, &:active {
+    outline: none;
+  }
+}
+
+
+/* grid-контейнер для контента блоков страницы*/
+
+.container {
+  max-width: 1003px;
+  margin: 0 auto;
+}
+
+
+/* текстовая ссылка, по умолчанию подчёркнута сплошной линией, можно сделать подчёркивание точками или вовсе его убрать*/
+
+@mixin link() {
+  color: $blue;
+  text-decoration: underline;
+  &_dotted {
+    color: $blue;
+    text-decoration: none;
+    border-bottom: 1px dotted $blue;
+  }
+  &_decoration_none {
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+.link {
+  @include link();
+}
+
+
+/* вертикальный список ссылок, встречается в footer и модальном окне*/
+
+.link-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  line-height: 21px;
+
+  &-item {
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-link {
+    @include link();
+  }
+}

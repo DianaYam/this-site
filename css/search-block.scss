@@ -1,0 +1,78 @@
+
+/* переменные*/
+@import "vars";
+
+.search-block {
+  padding: 102px 0 0;
+  background: $overlay;
+  z-index: 1;
+  min-height: 360px;
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .6;
+    background: url('../img/bg.png') center/cover;
+    z-index: -1;
+    mix-blend-mode: overlay;
+  }
+
+  // специальные стили для IE 10+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    background: url('../img/bg.png') center/cover;
+
+    &:after {
+      opacity: 1;
+      background: $overlay;
+    }
+  }
+
+  &-container {
+    padding-left: 21px;
+    padding-right: 23px;
+  }
+
+  &-header {
+    margin: 0 0 26px;
+    text-shadow: 1px 2px 5px rgba(0, 36, 69, 0.35);
+    color: $light-text;
+    font-size: 36px;
+    font-weight: 400;
+  }
+
+  &-form {
+    
+  }
+
+  &-field-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 9px;
+  }
+
+  &-field-label {
+    display: block;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin-right: 7px;
+  }
+
+  &-field {
+    width: 100%;
+  }
+
+  &-btn {
+    width: 140px;
+  }
+
+  &-caption {
+    color: $light-text;
+  }
+}
